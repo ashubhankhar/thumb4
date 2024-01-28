@@ -5,10 +5,8 @@ logger = logging.getLogger(__name__)
 
 import os
 
-if bool(os.environ.get("WEBHOOK", False)):
+bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
-else:
-    from config import Config
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
